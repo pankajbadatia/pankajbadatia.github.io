@@ -8,4 +8,4 @@ youtubeId: dcXqhMqhZUo
 Here is a YouTube video embedded using a Liquid include:
 
 <!-- {% include video.html id="dcXqhMqhZUo" %} -->
-{% include video.html id=page.youtubeId %}
+{% include youtube.html id=page.youtubeId %}
