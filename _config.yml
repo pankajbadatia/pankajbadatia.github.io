@@ -1,7 +1,9 @@
-
-title: "Pankaj Badatia"
-description: "Data Scientist | AI Advisor | Developer"
-url: "https://pankajbadatia.github.io"
-author:
-  name: "Pankaj Badatia"
-  bio: "Passionate about AI, Machine Learning, and driving innovation through technology."
+title: "My Portfolio and Blog"
+description: "Welcome to my personal portfolio and blog!"
+baseurl: "" # Replace with base URL if hosted in a subdirectory
+url: "https://example.com" # Replace with your domain
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
