@@ -1,0 +1,116 @@
+/* Default styles based on provided framework */
+
+:root {
+    --primary-color: #4d41e0;
+    --secondary-color: #4035c8;
+    --background-color: #ffffff;
+    --text-color: #080227;
+    --heading-color: #111016;
+    --border-color: #e0e0e0;
+    --font-primary: "Rubik", sans-serif;
+    --font-size-base: 16px;
+    --font-size-large: 1.25rem;
+    --font-size-small: 0.875rem;
+    --spacing: 1rem;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing);
+}
+
+.col {
+    flex: 1;
+    padding: var(--spacing);
+}
+
+.header {
+    padding: var(--spacing);
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: var(--font-size-large);
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: var(--spacing);
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+    color: var(--secondary-color);
+}
+
+.button {
+    display: inline-block;
+    padding: var(--spacing) var(--spacing * 2);
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: var(--border-radius);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+}
+
+.card {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-body {
+    padding: var(--spacing);
+}
+
+.footer {
+    text-align: center;
+    padding: var(--spacing);
+    border-top: 1px solid var(--border-color);
+    margin-top: var(--spacing);
+}
