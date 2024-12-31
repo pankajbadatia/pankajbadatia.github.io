@@ -1,7 +1,7 @@
 title: "Pankaj Badatia Portfolio"
 description: "Showcasing my journey and blogs."
 baseurl: "/pankajbadatia.github.io"
-url: "https://example.com"
+url: "https://pankajbadatia.com"
 theme: minima
 plugins:
   - jekyll-feed
