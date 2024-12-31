@@ -1,7 +1,8 @@
 ---
 layout: page
-title: "About Me"
+title: "About"
 permalink: /about/
 ---
 
-I am a developer and writer passionate about creating amazing things.
+<h1>About Me</h1>
+<p>I am Pankaj Badatia, a Data Scientist and AI Advisor with a strong focus on turning data into actionable insights.</p>

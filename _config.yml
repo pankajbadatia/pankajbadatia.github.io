@@ -1,9 +1,8 @@
-title: "My Portfolio and Blog"
-description: "Welcome to my personal portfolio and blog!"
-baseurl: "" # Replace with base URL if hosted in a subdirectory
-url: "https://example.com" # Replace with your domain
+title: "Pankaj Badatia Portfolio"
+description: "Showcasing my journey and sharing my blogs."
+baseurl: ""
+url: "https://example.com"
 theme: minima
-markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
