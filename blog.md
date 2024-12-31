@@ -4,11 +4,12 @@ title: "Blog"
 permalink: /blog/
 ---
 
-<h1>My Blog</h1>
+<h1>Blog</h1>
 <ul>
   {% for post in site.posts %}
   <li>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - <small>{{ post.date | date: "%B %d, %Y" }}</small>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <small>Published on {{ post.date | date: "%B %d, %Y" }}</small>
   </li>
   {% endfor %}
 </ul>
