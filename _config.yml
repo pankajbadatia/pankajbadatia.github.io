@@ -1,9 +1,6 @@
-title: "Pankaj Badatia Portfolio"
-description: "Showcasing my journey and blogs."
+
 baseurl: ""
-url: "https://example.com"
-theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-permalink: /blog/:year/:month/:title/
+title: My Portfolio
+description: Personal portfolio website
+author: Pankaj Badatia
+    
