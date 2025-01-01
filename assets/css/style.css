@@ -419,6 +419,27 @@ section {
 }
 
 
+
+/*--------------------------------------------------------------
+# ICON
+--------------------------------------------------------------*/
+
+.custom-icon {
+  width: 36px; /* Set the width of the icons */
+  height: 36px; /* Set the height of the icons */
+  border-radius: 50%; /* Optional: Make the icons circular */
+  transition: 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+.social-links a:hover .custom-icon {
+  transform: scale(1.2); /* Optional: Slight zoom on hover */
+}
+
+
+
+
+
+
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
