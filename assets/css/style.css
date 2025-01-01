@@ -153,7 +153,28 @@ h6 {
 /* Desktop Navigation */
 .nav-menu {
   padding: 30px 0 0 0;
+  max-height: calc(100vh - 100px); /* Ensure it fits within the viewport */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 10px; /* Add spacing for scrollbar */
 }
+
+.nav-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.nav-menu::-webkit-scrollbar-thumb {
+  background-color: #149ddd;
+  border-radius: 10px;
+}
+
+.nav-menu::-webkit-scrollbar-thumb:hover {
+  background-color: #37b3ed;
+}
+
+.nav-menu::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
 
 .nav-menu * {
   margin: 0;
