@@ -24,7 +24,7 @@
 
 .card__image-container {
     width: 100%;
-    padding-top: 175%; /* 16:9 Aspect Ratio */
+    padding-top: 100%; /* 16:9 Aspect Ratio */
     position: relative;
     overflow: hidden;
 }
