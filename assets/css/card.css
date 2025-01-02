@@ -80,5 +80,6 @@
 @media (max-width: 576px) {
   .card-grid {
     grid-template-columns: 1fr; /* 1 card per row on small screens */
+    justify-content: center; /* Center-align cards */
   }
 }
