@@ -1,7 +1,7 @@
 /* Card Grid */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Create responsive columns */
+  grid-template-columns: repeat(4, 1fr); /* Exactly 4 cards per row */
   gap: 20px; /* Spacing between cards */
   padding: 20px; /* Padding around the grid */
 }
@@ -15,11 +15,11 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
-  /* Set fixed dimensions */
+  /* Fixed dimensions */
   width: 200px;
   height: 300px;
 
-  /* Flex layout for content alignment */
+  /* Layout for content alignment */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,15 +33,15 @@
 
 /* Card Image */
 .card-img {
-  width: 100%; /* Fit the card's width */
-  height: 150px; /* Fixed height for the image */
-  object-fit: cover; /* Crop the image if necessary */
-  border-bottom: 1px solid #ddd;
+  width: 100%; /* Fill the card's width */
+  height: 150px; /* Fixed height for image */
+  object-fit: cover; /* Crop image to fit */
+  border-bottom: 1px solid #ddd; /* Separator */
 }
 
 /* Card Content */
 .card-content {
-  padding: 10px;
+  padding: 10px; /* Spacing inside the card content */
 }
 
 .card-title {
@@ -67,4 +67,17 @@
 .card-link:hover {
   color: #0d6efd;
   text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: 1fr; /* 1 card per row on extra small screens */
+  }
 }
