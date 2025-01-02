@@ -1,93 +1,85 @@
+/* Card Grid */
 .card-grid {
   display: grid;
-  grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr; /* Similar structure as main */
-  grid-gap: 40px;
-  padding: 60px 0;
+  grid-template-columns: repeat(4, 1fr); /* Ensure exactly 4 cards per row */
+  gap: 20px; /* Spacing between cards */
+  padding: 20px; /* Padding around the grid */
+  justify-content: center; /* Center the grid if there's extra space */
 }
 
-.text--medium {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #ecf0f1;
-}
-
-.card-grid-inner {
-  grid-column: 2 / span 12;
-  display: grid;
-  grid-template-columns: repeat(12, minmax(auto, 60px)); /* Define card layout */
-  grid-gap: 40px;
-}
-
+/* Individual Card */
 .card {
-  grid-column-end: span 4;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  /* Fixed dimensions */
+  width: 200px;
+  height: 300px;
+
+  /* Layout for content alignment */
   display: flex;
   flex-direction: column;
-  background-color: #39393b;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
+  justify-content: space-between;
 }
 
+/* Hover Effect */
 .card:hover {
-  transform: translateY(-7px);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.card__image-container {
-  width: 100%;
-  padding-top: 56.25%; /* Maintain aspect ratio */
-  overflow: hidden;
-  position: relative;
+/* Card Image */
+.card-img {
+  width: 100%; /* Fill the card's width */
+  height: 150px; /* Fixed height for image */
+  object-fit: cover; /* Crop image to fit */
+  border-bottom: 1px solid #ddd; /* Separator */
 }
 
-.card__image-container img {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* Card Content */
+.card-content {
+  padding: 10px; /* Spacing inside the card content */
 }
 
-.card__content {
-  padding: 20px;
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-.card__title {
-  margin-bottom: 20px;
+.card-text {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
 }
 
-.card__info {
-  display: flex;
-  align-self: end;
-  align-items: center;
+.card-link {
+  text-decoration: none;
+  color: #149ddd;
+  font-weight: bold;
+  font-size: 14px;
 }
 
-@media only screen and (max-width: 1000px) {
-  .card {
-    grid-column-end: span 6;
-  }
+.card-link:hover {
+  color: #0d6efd;
+  text-decoration: underline;
 }
 
-@media only screen and (max-width: 700px) {
+/* Responsive Design */
+@media (max-width: 992px) {
   .card-grid {
-    grid-gap: 20px;
-  }
-  .card {
-    grid-column-end: span 12;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media (max-width: 576px) {
   .card-grid {
-    grid-template-columns: 10px repeat(6, 1fr) 10px;
-    grid-gap: 10px;
-  }
-  .card-grid-inner {
-    grid-column: 2 / span 6;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 20px;
-  }
-  .card {
-    grid-column-end: span 6;
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+    justify-content: center; /* Center-align cards */
   }
 }
