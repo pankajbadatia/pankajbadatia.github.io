@@ -17,7 +17,7 @@
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
   /* Fixed dimensions */
-  width: 200px;
+  
   height: 300px;
 
   /* Layout for content alignment */
