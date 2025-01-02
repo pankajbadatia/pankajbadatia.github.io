@@ -1,9 +1,10 @@
 /* Card Grid */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Exactly 4 cards per row */
+  grid-template-columns: repeat(4, 1fr); /* Ensure exactly 4 cards per row */
   gap: 20px; /* Spacing between cards */
   padding: 20px; /* Padding around the grid */
+  justify-content: center; /* Center the grid if there's extra space */
 }
 
 /* Individual Card */
@@ -69,15 +70,15 @@
   text-decoration: underline;
 }
 
-
-@media (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 992px) {
   .card-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on small screens */
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .card-grid {
-    grid-template-columns: 1fr; /* 1 card per row on extra small screens */
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
   }
 }
