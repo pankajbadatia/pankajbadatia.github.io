@@ -75,3 +75,7 @@
 .card:hover .card__link {
     color: #fff; /* Match navbar hover active color */
 }
+
+.card:hover .card__text {
+    color: #fff; /* Match navbar hover active color */
+}
