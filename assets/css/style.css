@@ -1132,6 +1132,8 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
+  position: relative;
+  z-index: 1;
   padding: 15px;
   color: #f4f6fd;
   font-size: 14px;
