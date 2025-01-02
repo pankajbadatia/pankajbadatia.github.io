@@ -10,7 +10,13 @@ body {
   flex-direction: column;
   min-height: 100vh; /* Force the body to use the full viewport height */
 }
-
+#content-wrapper {
+  display: flex;
+  flex-direction: column; /* Main content stacked with footer */
+  flex: 1; /* Take up the remaining width */
+  margin-left: 300px; /* Leave space for the sidebar */
+  min-height: 100vh; /* Ensure the content wrapper fills the viewport */
+}
 a {
   color: #149ddd;
   text-decoration: none;
