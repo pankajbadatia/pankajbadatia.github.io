@@ -158,6 +158,7 @@ h6 {
   padding: 30px 0 0 0;
   max-height: 60vh; /* Limit height to fit within viewport */
   overflow-y: auto; /* Enable vertical scrolling */
+  z-index: 10;
 }
 .nav-menu::-webkit-scrollbar {
   width: 6px; /* Set scrollbar width */
@@ -1132,8 +1133,6 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  position: relative;
-  clear: both;
   padding: 15px;
   color: #f4f6fd;
   font-size: 14px;
@@ -1141,7 +1140,7 @@ section {
   left: 0;
   bottom: 0;
   width: 300px;
-  z-index: 1;
+  z-index: 9999;
   background: #040b14;
 }
 
