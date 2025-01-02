@@ -156,7 +156,7 @@ h6 {
 /* Desktop Navigation */
 .nav-menu {
   padding: 30px 0 0 0;
-  max-height: 80vh; /* Limit height to fit within viewport */
+  max-height: 120vh; /* Limit height to fit within viewport */
   overflow-y: auto; /* Enable vertical scrolling */
 }
 .nav-menu::-webkit-scrollbar {
