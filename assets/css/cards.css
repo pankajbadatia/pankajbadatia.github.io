@@ -8,7 +8,7 @@
 
 .card {
     background-color: #040b14; /* Same as navbar background */
-    border-radius: 8px;
+    border-radius: 12px; /* Slightly more rounded corners */
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
@@ -17,9 +17,9 @@
 }
 
 .card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
-    background-color: #149ddd; /* Match navbar hover color */
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+    background-color: #1a73e8; /* Modern blue hover color */
 }
 
 .card__image-container {
@@ -40,42 +40,45 @@
 
 .card__content {
     padding: 20px;
-    color: #ecf0f1; /* Light gray text */
+    color: #f5f7fa; /* Softer white for text */
     flex-grow: 1;
 }
 
 .card__title {
-    font-family: "Poppins", sans-serif;
-    font-size: 18px;
+    font-family: "Lora", serif; /* Elegant serif font for titles */
+    font-size: 20px;
+    font-weight: 600; /* Slightly bold for emphasis */
     margin-bottom: 10px;
-    color: #a8a9b4; /* Navbar inactive text color */
+    color: #a3b4cc; /* Muted blue for titles */
     transition: color 0.3s;
+    letter-spacing: 0.5px; /* Subtle spacing for a cleaner look */
 }
 
 .card__text {
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    line-height: 20px;
+    font-family: "Roboto", sans-serif; /* Modern sans-serif for body text */
+    font-size: 15px;
+    line-height: 22px;
     margin-bottom: 20px;
-    color: #a8a9b4; /* Muted light gray (navbar text color) */
+    color: #b0bec5; /* Light gray for better readability */
 }
 
 .card__link {
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif; /* Maintain consistency with navbar */
     font-size: 14px;
-    color: #149ddd; /* Navbar link color */
+    font-weight: 500;
+    color: #1a73e8; /* Standout blue link color */
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .card:hover .card__title {
-    color: #fff; /* Match navbar hover active color */
+    color: #ffffff; /* Pure white for hover */
 }
 
 .card:hover .card__link {
-    color: #fff; /* Match navbar hover active color */
+    color: #ffffff; /* Pure white for hover */
 }
 
 .card:hover .card__text {
-    color: #fff; /* Match navbar hover active color */
+    color: #ffffff; /* Pure white for hover */
 }
