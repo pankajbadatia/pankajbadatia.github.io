@@ -31,13 +31,13 @@
 .card__image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Maintain aspect ratio and crop excess parts */
+    object-fit: contain; /* Ensures the entire image is visible */
     object-position: center; /* Center the image */
     transition: transform 0.3s ease; /* Smooth hover animation */
 }
 
 .card:hover .card__image-container img {
-    transform: scale(1.1); /* Zoom effect on hover */
+    transform: scale(1); /* Remove zoom effect to keep full image visible */
 }
 
 /* Overlay with Button */
