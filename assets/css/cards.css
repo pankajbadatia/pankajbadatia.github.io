@@ -24,14 +24,16 @@
 .card__image-container {
     position: relative;
     overflow: hidden; /* Ensure overlay fits within image */
-    height: 200px; /* Fixed height for consistency */
+    width: 100%; /* Full width of the card */
+    height: 260px; /* Set a fixed height for the container */
 }
 
 .card__image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure image fills area */
-    transition: transform 0.3s ease;
+    object-fit: cover; /* Maintain aspect ratio and crop excess parts */
+    object-position: center; /* Center the image */
+    transition: transform 0.3s ease; /* Smooth hover animation */
 }
 
 .card:hover .card__image-container img {
@@ -95,4 +97,3 @@
     color: #b0bec5;
     line-height: 18px;
 }
-t
