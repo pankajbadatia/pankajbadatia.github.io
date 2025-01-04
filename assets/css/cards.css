@@ -39,36 +39,42 @@
 }
 
 .card__content {
-    padding: 15px; /* Reduced padding */
+    padding: 10px; /* Reduced padding */
     color: #f5f7fa; /* Softer white for text */
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align content more compactly */
 }
 
 .card__title {
     font-family: "Lora", serif; /* Elegant serif font for titles */
-    font-size: 16px; /* Slightly smaller font size */
+    font-size: 14px; /* Smaller font size */
     font-weight: 600; /* Semi-bold for emphasis */
-    margin-bottom: 8px; /* Reduced margin */
+    margin-bottom: 6px; /* Reduced margin */
     color: #a3b4cc; /* Muted blue for titles */
     transition: color 0.3s;
     letter-spacing: 0.4px; /* Subtle spacing for a cleaner look */
+    text-align: center; /* Center align for compact space */
 }
 
 .card__text {
     font-family: "Roboto", sans-serif; /* Modern sans-serif for body text */
-    font-size: 13px; /* Reduced font size */
-    line-height: 18px; /* Compact line height */
-    margin-bottom: 15px; /* Reduced margin */
+    font-size: 12px; /* Reduced font size */
+    line-height: 16px; /* Compact line height */
+    margin-bottom: 10px; /* Reduced margin */
     color: #b0bec5; /* Light gray for better readability */
+    text-align: center; /* Center align for better layout */
 }
 
 .card__link {
     font-family: "Poppins", sans-serif; /* Consistent with navbar */
-    font-size: 13px; /* Slightly smaller font */
+    font-size: 12px; /* Smaller font */
     font-weight: 500;
     color: #1a73e8; /* Standout blue link color */
     text-decoration: none;
     transition: color 0.3s;
+    text-align: center; /* Center align for compact layout */
 }
 
 .card:hover .card__title {
