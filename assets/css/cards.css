@@ -9,11 +9,12 @@
 .card {
     background: #040b14;
     border-radius: 15px;
-    overflow: visible; /* Allow button to overflow the card */
+    overflow: hidden; /* Ensure button doesn't get clipped */
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
+    position: relative; /* Position for layering */
     cursor: pointer;
+    padding-bottom: 20px; /* Add padding to ensure space for button */
 }
 
 .card:hover {
@@ -24,7 +25,7 @@
 .card__image-container {
     width: 100%;
     position: relative;
-    overflow: visible; /* Allow the button to be visible outside the image */
+    overflow: visible; /* Ensure button remains visible */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -38,12 +39,12 @@
     transform: scale(1.1); /* Subtle zoom effect */
 }
 
-/* Adjust styles for the floating button */
+/* Floating Button Styles */
 .card__floating-link {
     position: absolute;
-    bottom: -20px; /* Positioned below the image container */
+    bottom: 0; /* Align button at the bottom of the image */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 50%); /* Adjust button to overlap image and card */
     background: rgba(26, 115, 232, 0.9); /* Semi-transparent blue */
     color: #fff;
     font-family: "Poppins", sans-serif;
@@ -54,11 +55,11 @@
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0px 4px 10px rgba(26, 115, 232, 0.3);
-    z-index: 1; /* Ensure the button is above other elements */
+    z-index: 2; /* Ensure button is above other elements */
 }
 
 .card__image-container:hover .card__floating-link {
-    bottom: -15px; /* Slight lift on hover */
+    transform: translate(-50%, 45%); /* Slight lift effect on hover */
     background: #1a73e8;
     box-shadow: 0px 6px 15px rgba(26, 115, 232, 0.5);
 }
@@ -68,7 +69,6 @@
     text-align: center;
     color: #d0d6dc;
     font-family: "Roboto", sans-serif;
-    margin-top: 20px; /* Adjust for button overlap */
 }
 
 .card__title {
