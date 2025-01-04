@@ -9,12 +9,12 @@
 .card {
     background: #040b14;
     border-radius: 15px;
-    overflow: hidden; /* Ensure button doesn't get clipped */
+    overflow: hidden; /* Ensure the button and content fit within the card */
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative; /* Position for layering */
+    position: relative; /* For layering floating button */
     cursor: pointer;
-    padding-bottom: 20px; /* Add padding to ensure space for button */
+    padding-bottom: 20px; /* Ensure space for floating button */
 }
 
 .card:hover {
@@ -36,34 +36,41 @@
 }
 
 .card__image-container:hover img {
-    transform: scale(1.1); /* Subtle zoom effect */
+    transform: scale(1.1); /* Subtle zoom effect for interactivity */
 }
 
 /* Floating Button Styles */
 .card__floating-link {
     position: absolute;
-    bottom: 0; /* Align button at the bottom of the image */
+    bottom: 0; /* Align at the bottom of the image */
     left: 50%;
-    transform: translate(-50%, 50%); /* Adjust button to overlap image and card */
-    background: rgba(26, 115, 232, 0.9); /* Semi-transparent blue */
-    color: #fff;
+    transform: translate(-50%, 50%); /* Overlap image and card */
+    background: rgba(26, 115, 232, 0.85); /* Slightly transparent blue */
+    color: #ffffff; /* White text */
     font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 10px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0px 4px 10px rgba(26, 115, 232, 0.3);
+    font-size: 12px; /* Smaller font for elegance */
+    font-weight: 500; /* Medium weight for clarity */
+    padding: 5px 12px; /* Thin padding for a slimmer button */
+    border-radius: 25px; /* Smooth oval shape */
+    text-decoration: none; /* Remove underline */
+    transition: all 0.3s ease; /* Smooth hover transition */
+    box-shadow: 0px 3px 8px rgba(26, 115, 232, 0.2); /* Light shadow for subtle depth */
     z-index: 2; /* Ensure button is above other elements */
 }
 
 .card__image-container:hover .card__floating-link {
-    transform: translate(-50%, 45%); /* Slight lift effect on hover */
-    background: #1a73e8;
-    box-shadow: 0px 6px 15px rgba(26, 115, 232, 0.5);
+    transform: translate(-50%, 45%); /* Slight upward hover effect */
+    background: #1a73e8; /* Brighter blue on hover */
+    box-shadow: 0px 4px 12px rgba(26, 115, 232, 0.4); /* Enhanced shadow on hover */
 }
 
+.card__floating-link:active {
+    transform: translate(-50%, 48%); /* Slightly press down effect */
+    background: #0e5ac7; /* Darker shade for active state */
+    box-shadow: 0px 2px 6px rgba(26, 115, 232, 0.3); /* Reduced shadow */
+}
+
+/* Card Content Styles */
 .card__content {
     padding: 20px;
     text-align: center;
