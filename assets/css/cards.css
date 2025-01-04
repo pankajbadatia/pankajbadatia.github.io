@@ -7,26 +7,29 @@
 }
 
 .card {
-    background-color: #040b14; /* Same as navbar background */
-    border-radius: 10px; /* Slightly rounded corners */
+    background: linear-gradient(145deg, #040b14, #0a1623); /* Subtle gradient for depth */
+    border-radius: 15px; /* More rounded corners for a modern look */
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    position: relative; /* Enable layered effects */
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.3);
-    background-color: #1a73e8; /* Modern blue hover color */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(145deg, #1e73f0, #1a65d8); /* Dynamic gradient on hover */
 }
 
 .card__image-container {
     width: 100%;
-    padding-top: 100%; /* 1:1 Aspect Ratio */
+    padding-top: 60%; /* Adjusted aspect ratio */
     position: relative;
     overflow: hidden;
+    background: rgba(255, 255, 255, 0.03); /* Subtle background texture effect */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .card__image-container img {
@@ -36,55 +39,67 @@
     transform: translate(-50%, -50%);
     width: 100%;
     height: auto;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card__image-container img {
+    transform: translate(-50%, -50%) scale(1.1); /* Zoom effect on hover */
 }
 
 .card__content {
-    padding: 10px; /* Reduced padding */
+    padding: 12px; /* Compact padding */
     color: #f5f7fa; /* Softer white for text */
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Align content more compactly */
+    justify-content: center;
+    align-items: center; /* Center-align everything */
+    text-align: center; /* Artistic layout */
+    background: rgba(255, 255, 255, 0.05); /* Subtle translucent effect */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card__title {
-    font-family: "Lora", serif; /* Elegant serif font for titles */
-    font-size: 14px; /* Smaller font size */
-    font-weight: 600; /* Semi-bold for emphasis */
-    margin-bottom: 6px; /* Reduced margin */
-    color: #a3b4cc; /* Muted blue for titles */
+    font-family: "Playfair Display", serif; /* Elegant serif font for artistic feel */
+    font-size: 18px;
+    font-weight: 700; /* Bold for emphasis */
+    margin-bottom: 8px;
+    color: #ffffff; /* Pure white for titles */
+    text-transform: uppercase; /* Add modern uppercase styling */
+    letter-spacing: 0.5px;
     transition: color 0.3s;
-    letter-spacing: 0.4px; /* Subtle spacing for a cleaner look */
-    text-align: center; /* Center align for compact space */
 }
 
 .card__text {
     font-family: "Roboto", sans-serif; /* Modern sans-serif for body text */
-    font-size: 12px; /* Reduced font size */
-    line-height: 16px; /* Compact line height */
-    margin-bottom: 10px; /* Reduced margin */
-    color: #b0bec5; /* Light gray for better readability */
-    text-align: center; /* Center align for better layout */
+    font-size: 12px; /* Compact size */
+    line-height: 16px; /* Tight line height */
+    margin-bottom: 10px;
+    color: #d0d6dc; /* Muted light gray for contrast */
 }
 
 .card__link {
-    font-family: "Poppins", sans-serif; /* Consistent with navbar */
-    font-size: 12px; /* Smaller font */
+    font-family: "Poppins", sans-serif; /* Modern font for CTA */
+    font-size: 13px;
     font-weight: 500;
-    color: #1a73e8; /* Standout blue link color */
+    color: #1e73f0; /* Highlight link with vibrant blue */
     text-decoration: none;
-    transition: color 0.3s;
-    text-align: center; /* Center align for compact layout */
+    padding: 6px 12px;
+    border: 1px solid #1e73f0; /* Border for a button-like effect */
+    border-radius: 20px; /* Rounded button style */
+    transition: background 0.3s, color 0.3s;
 }
 
 .card:hover .card__title {
-    color: #ffffff; /* Pure white for hover */
+    color: #fffae5; /* Slight off-white hover color */
 }
 
 .card:hover .card__link {
-    color: #ffffff; /* Pure white for hover */
+    color: #ffffff;
+    background: #1e73f0; /* Blue button on hover */
+    border-color: #ffffff;
 }
 
 .card:hover .card__text {
-    color: #ffffff; /* Pure white for hover */
+    color: #e0e7f0; /* Subtle color change for text */
 }
