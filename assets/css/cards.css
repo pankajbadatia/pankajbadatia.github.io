@@ -30,7 +30,7 @@
 .card__image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure image covers area */
+    object-fit: cover; /* Ensure image fills area */
     transition: transform 0.3s ease;
 }
 
@@ -46,17 +46,19 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button */
     opacity: 0; /* Hidden by default */
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+    z-index: 2; /* Ensure it appears above other elements */
 }
 
 .card:hover .card__overlay {
     opacity: 1; /* Show overlay on hover */
 }
 
+/* Button Styling */
 .card__button {
     padding: 8px 18px;
     background: #1a73e8; /* Vibrant blue */
@@ -93,3 +95,4 @@
     color: #b0bec5;
     line-height: 18px;
 }
+t
