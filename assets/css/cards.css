@@ -9,7 +9,7 @@
 .card {
     background: #040b14;
     border-radius: 15px;
-    overflow: hidden;
+    overflow: visible; /* Allow button to overflow the card */
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -24,7 +24,7 @@
 .card__image-container {
     width: 100%;
     position: relative;
-    overflow: hidden;
+    overflow: visible; /* Allow the button to be visible outside the image */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -38,9 +38,10 @@
     transform: scale(1.1); /* Subtle zoom effect */
 }
 
+/* Adjust styles for the floating button */
 .card__floating-link {
     position: absolute;
-    bottom: -20px;
+    bottom: -20px; /* Positioned below the image container */
     left: 50%;
     transform: translateX(-50%);
     background: rgba(26, 115, 232, 0.9); /* Semi-transparent blue */
@@ -53,10 +54,11 @@
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0px 4px 10px rgba(26, 115, 232, 0.3);
+    z-index: 1; /* Ensure the button is above other elements */
 }
 
 .card__image-container:hover .card__floating-link {
-    bottom: -10px; /* Slight movement upward on hover */
+    bottom: -15px; /* Slight lift on hover */
     background: #1a73e8;
     box-shadow: 0px 6px 15px rgba(26, 115, 232, 0.5);
 }
@@ -66,6 +68,7 @@
     text-align: center;
     color: #d0d6dc;
     font-family: "Roboto", sans-serif;
+    margin-top: 20px; /* Adjust for button overlap */
 }
 
 .card__title {
